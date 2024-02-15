@@ -14,8 +14,10 @@ pipeline {
 		}
 		stage('Print params') {
 			steps {
-				script "echo ${PIPELINE_NAME}"
-				script "echo ${ID_JOB}"
+				script { 
+					sh "echo ${PIPELINE_NAME}"
+					sh "echo ${ID_JOB}"
+				}
 			}
 		}
 	}
